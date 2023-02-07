@@ -1,0 +1,26 @@
+
+
+//Pour retirer la scrollbar
+ion-content {
+    width: calc(100% + 22px);
+}
+// :::::::::::::::::::
+.trait{
+    text-decoration: underline 4px solid;
+    border-bottom: #BF553B solid 3px;
+    width: 30%;
+    height: 30px;
+    margin-left: 35%;
+    margin-top: -20px;
+    margin-bottom: 15px;
+  }
+  .tout{
+    margin-bottom: 10%;
+    border: 1px solid black;
+    margin-top: 6%;
+    height: 60%;
+    margin-right: 5px;
+    margin-left: 4px;
+    border-radius: 15px;
+}
+

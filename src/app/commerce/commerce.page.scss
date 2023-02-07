@@ -1,0 +1,61 @@
+  //Pour retirer la scrollbar
+  ion-content {
+    width: calc(100% + 22px);
+  }
+.hau{
+    padding-top: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+#rectangle{
+    background-color: white;
+    border-radius: 10px;
+  }
+#rectangle p{
+ font-weight: bold;
+ margin-left: 5px;
+}#rectangle{
+    border: 1px solid white;
+    padding-bottom: 10px;
+  }
+  span{
+    font-size: 10px;
+  }
+  .milieu{
+      background-color: white;   
+      border-radius: 10px 10px;
+    //   margin-bottom: 25%;
+      margin-left: 4px;
+      margin-right: 9%;
+    //  padding-top: 20px;
+      
+  }
+  .trait{
+    text-decoration: underline 4px solid;
+    border-bottom: #BF553B solid 3px;
+    width: 30%;
+    height: 30px;
+    margin-left: 35%;
+    margin-top: -25px;
+    margin-bottom: 15px;
+  }
+ 
+//   .demande{
+//     display: grid;
+//     grid-template-columns: auto auto;
+// }
+
+.corps{
+    height: 94%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 12%;
+}
+p{
+    text-align: justify;
+//   border: solid;  
+}
+

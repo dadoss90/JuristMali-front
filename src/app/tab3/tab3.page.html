@@ -1,0 +1,201 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container>
+</ion-content> -->
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>assistance</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="touhead">
+    <div id="droite">
+      <img src="assets/images/Assistance.jpg" alt="Logo " id="logo" />
+    </div>
+  </div>
+  <div class="milieu">
+    <div class="debut">
+      <h6 class="titre" style="text-align: center; font-weight: bold;">ASSISTANCE JURIDIQUE</h6>
+      <div class="trait"></div>
+      <div class="demande">
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="container">
+      <p>ATTENTION : Aucune demande d'assistance judiciaire ne pourra être traitées utilement si le formulaire n'est pas
+        rempli et si les documents nécessaires ne sont pas joints !
+
+      </p>
+      <div class="trait2"></div>
+      <p>Renseignement sur le demandeur</p>
+      <div class="trait2"></div>
+    </div>
+    <form action="">
+      <style>
+        form {
+          margin-top: 2%;
+          width: 96%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .card {
+          margin-bottom: 5%;
+          width: 96%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .profile {
+          display: flex;
+          justify-content: flex-start;
+        }
+
+        .profile input {
+          width: 50% !important;
+          height: 20% !important;
+          margin-bottom: 2%;
+        }
+
+        .check {
+          display: flex;
+          margin-bottom: 4%;
+
+        }
+
+        .check span {
+          margin-left: 5%;
+        }
+
+        .parent-div {
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+          margin-left: 45%;
+          margin-bottom: 5%;
+        }
+
+        .parent-div input[type=file] {
+          left: 0;
+          top: 0;
+          opacity: 0;
+          position: absolute;
+          font-size: 10px;
+          margin-left: auto;
+        }
+
+        .btn-upload {
+          background-color: #BF553B;
+          border: 1px solid #000;
+          color: #fff;
+          padding: 10px 25px;
+          border-radius: 10px;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      </style>
+      <div class="profile ">
+        <input type="text" name="" id="nom" placeholder="nom"> &nbsp; &nbsp;
+        <input type="text" name="prenom" placeholder="prenom"> &nbsp; &nbsp;
+        <input type="number" name="Numero" id="" placeholder="Numero">
+      </div>
+      <div class="profile ">
+        <input type="text" name="" id="" placeholder="Adresse"> &nbsp; &nbsp;
+        <input type="number" name="age" placeholder="Age"> &nbsp; &nbsp;
+        <input type="text" name="profession" id="" placeholder="Profession">
+      </div>
+      <div class="profile">
+        <input type="text" name="" id="sexe" placeholder="Sexe"> &nbsp; &nbsp;
+        <input type="email" name="email" placeholder="email">
+      </div>
+      <p>Introduiser une demande pour chaque affaire</p>
+      <div class="trait3"></div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Bail à loyer</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Divorce</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Violence domestique</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Pension Alimentaire</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Garde d'enfant</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Droit Commercial</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Droit du Travail</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Droit Familial</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Contravention</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Délit</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Crime</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Protection de la jeunesse</span>
+      </div>
+      <div class="check">
+        <input type="checkbox">
+        <span>Droit Administratif</span>
+      </div>
+      <div class="trait3"></div>
+      <div class="parent-div">
+        <button class="btn-upload">Joindre un fichier</button>
+        <input type="file" name="upfile" accept="image/png, image/jpeg , imag/jpg" />
+        <span style="font-size: 10px;">Copie de la pièce d'identité!</span>
+      </div>
+      <textarea id="story" name="story" rows="5" cols="28" style="border-radius: 12px;">
+      Donnez une description ...
+      </textarea>
+      <button style="background-color: #BF553B; height: 40px;color: #fff; width:100%; border-radius: 12px; margin-bottom: 12%; margin-top: 2%; "(click)="soumettre()">Soumettre</button>
+    </form>
+  </div>
+  <div class=""></div>
+</ion-content>

@@ -1,0 +1,87 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>casier</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="touhead">
+    <div id="droite">
+      <img src="assets/images/Justice.webp" alt="Logo " id="logo" />
+    </div>
+   </div>
+   <div class="milieu">
+    <div class="debut">
+      <h6 class="titre" style="text-align: center; font-weight: bold;">CASIER JUDICIAIRE</h6>
+      <div class="trait"></div>
+      <div class="demande">
+        <div></div>  
+      </div>
+    </div>
+  </div>
+
+  <div class="corps">
+    <h5 style="color: black; text-align: center;
+    padding-top: 15px; font-weight: bold;">PROCEDURE </h5>
+     <p style="padding-left: 9px; padding-right: 9px; font-size: 12px; ">
+      L’usager se présente au Tribunal Civil de son lieu de naissance
+       au Bureau du Casier Judiciaire et du Certificat de Nationalité et précise son domicile sa profession et sa situation familiale 
+       L’agent du Bureau procède à l’enregistrement des informations sur une fiche qu’il transmet au greffier en chef.
+       Le Greffier en Chef atteste après recherche dans les fichiers dont il dispose, que le requérant n’a pas encore été l’objet d’une condamnation pénale.
+    </p>
+   <div class="tout" style="display: flex; justify-content: space-between;">
+    <div class="gauche1">
+      <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B;">
+        Document à fournir :</h6>
+      <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">
+        Copie de l'extrait d'acte de naissance</h6>
+
+      <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B; margin-top: 35px;">
+        Coût légal :</h6>
+      <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">
+        750 francs CFA</h6>
+
+      <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B;  margin-top: 35px;">
+        Délai d'obtention</h6>
+      <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">24 heures</h6>      
+          
+    </div>
+
+
+    <div class="droite1">
+
+
+      <div class="buttondroit">
+        <form (ngSubmit)="postdemandecasier()" >
+          <!-- <label for="myfile" >Photo</label> -->
+          <input (change)="fileChang($event)" class="file" type="file" name="photo" ><br><br>
+
+        </form>
+
+        <img src="assets/images/certificat nationalite.jpg" alt=""  style="width: 75%; margin-left: 16%;">
+
+       
+        </div>
+
+    </div>
+   </div>
+
+   <div class="baspay">
+    <div class="pay1">
+      <img src="assets/images/Orange money.png" alt="" style="margin-left: 13px; height: 37px; width: 450px;">      
+    </div>
+    <div class="pay2" > <img src="assets/images/Mobi cash.jpg" alt="" style="height: 38%; margin-left: 35px;"></div>
+    <div class="pay3">
+      <button  style="background-color: #BF553B; width: 85px; color: white; margin-top: 5px; margin-right: 9px;" (click)="postdemandecasier()">ENVOYER</button>
+    </div>
+   </div>
+    
+    </div>
+</ion-content>

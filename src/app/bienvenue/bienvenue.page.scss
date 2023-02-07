@@ -1,0 +1,37 @@
+.bienvenue{
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 23px;
+}
+p{
+    text-align: center;
+    font-size: 15px;
+}
+
+
+ion-button{
+    align-items: center;
+    text-align: center;
+    margin-left: 45px;
+    margin-top: 30px;
+    width: 70% ;
+    border-radius: 10px 20px solid
+
+}
+.bord{
+    border-radius:  10% 30% 50% 70%;
+    background-color: #BF553B;
+    margin-top: 0;
+}
+.shape{
+    position: fixed;
+    top:0;
+    left: 0;
+height: 100px;
+width: 100px;
+    img{
+        opacity: 0.9;
+    }
+}

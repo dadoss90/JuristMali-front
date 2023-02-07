@@ -1,0 +1,107 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>connexion</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <body>
+    <div class="main">  	
+      <input type="checkbox" id="chk" aria-hidden="true">
+  
+
+
+
+      <!-- inscription -->
+
+        <div class="signup">
+          <form
+            *ngIf="!isSuccessful"
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate
+          >
+            <label for="chk" aria-hidden="true">INSCRIPTION</label>
+            <input type="text"  placeholder="User name" required=""
+              class="form-control"
+              name="username"
+              [(ngModel)]="form.username"
+              required
+              minlength="3"
+              maxlength="20"
+              #username="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+            >
+            <input type="text" name="nomcomplet" placeholder="Nom complet" required=""
+              class="form-control"
+              [(ngModel)]="form.nomcomplet"
+              required
+              #nomcomplet="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && nomcomplet.errors }"
+            >
+            <input type="text" placeholder="Numero" required=""
+              class="form-control"
+              name="numerotelephone"
+              [(ngModel)]="form.numerotelephone"
+              required
+              minlength="6"
+              #numerotelephone="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && numerotelephone.errors }"
+            >
+            <input placeholder="Email" required=""
+
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            #email="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+            >
+            <!-- <input type="text" name="pswd" placeholder="Genre" required=""> -->
+              <select style="margin-left: 55px; border-radius: 5px; width: 165px;   opacity: 0.8;"
+              class="form-control"
+              name="genre"
+              [(ngModel)]="form.genre"
+              required
+              genre
+              #genre="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && genre.errors }"
+              >
+                <option value="Sexe">Genre</option>
+                <option value="femme">Femme</option>
+                <option value="homme">Homme</option>
+              </select>
+           
+            <input type="password" name="pswd" placeholder="Mot de passe" required=""
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            password
+            #password="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+            >
+
+            <button type="submit">Inscription</button>
+          </form>
+        </div>
+
+
+
+
+        <!-- connexion -->
+  
+        <div class="login">
+          <form>
+            <label for="chk"  aria-hidden="true">Connexion</label>
+            <input type="text" [(ngModel)]="EmailLogin" name="text" placeholder="Email" required="">
+            <input type="password"  [(ngModel)]="PasswordLogin" name="pswd" placeholder="Mot de passe" required="">
+            <button  (click)="Login()" >Connecter</button>
+          </form>
+        </div>
+    </div>
+  </body>
+
+</ion-content>

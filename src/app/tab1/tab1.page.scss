@@ -1,0 +1,129 @@
+
+
+
+.container{
+  background-color: #BF553B;
+  height: 100%;
+}
+.touhead{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+#gauche {
+  width: 60px;
+}
+#droite {
+  width: 30px;
+}
+#droite img{
+  border-radius: 60%;
+}
+.hau{
+  padding-top: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#rectangle{
+  background-color: white;
+  border-radius: 10px;
+}
+#rectangle p{
+ font-weight: bold;
+ margin-left: 5px;
+}
+
+
+  // ghh
+  // #rectangle {
+  //   width: 300px;
+  //   height: 200px;
+  //   background-color: #F7F9F9;
+  //   padding: 20px;
+  // }
+  
+  #rectangle{
+    border: 1px solid white;
+    padding-bottom: 10px;
+  }
+  span{
+    font-size: 10px;
+  }
+  .milieu{
+      background-color: white;   
+      border-radius: 10px 10px;
+      margin-bottom: 45%;
+      margin-left: 4px;
+      margin-right: 9%;
+    //  padding-top: 20px;
+      
+  }
+  .trait{
+    text-decoration: underline 4px solid;
+    border-bottom: #BF553B solid 3px;
+    width: 30%;
+    height: 30px;
+    margin-left: 35%;
+    margin-top: -25px;
+    margin-bottom: 15px;
+  }
+ 
+  ion-button{
+    font-size: 8px;
+    width: 55%;
+    margin-left: 38%;
+    background-color: #BF553B !important;
+    margin-bottom: 15px;
+}
+  .demande{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
+.titre{
+  top: 70px;
+  font-size: 13px;
+  text-align: center;
+}
+.imag{
+  width: 60px;
+}
+
+.text{
+font-size: 9px;
+}
+
+.gaucheMilieu{
+  display: flex;
+}
+.droiteMilieu{
+  display: flex;
+}
+.fin{
+  display: flex;
+}
+  //Pour retirer la scrollbar
+ion-content {
+  width: calc(100% + 22px);
+}
+
+// :::::::::after
+ion-modal {
+  --width: 100%;
+  --height: 50%;
+  margin-top: -22%;
+  // padding-right: -15%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+// ion-modal::part(backdrop) {
+//   background: rgba(209, 213, 219);
+//   opacity: 1;
+// }
+
+// ion-modal ion-toolbar {
+//   --background: rgb(14 116 144);
+//   --color: white;
+// }

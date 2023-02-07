@@ -1,0 +1,104 @@
+.trait{
+    text-decoration: underline 4px solid;
+    border-bottom: #BF553B solid 3px;
+    width: 30%;
+    height: 30px;
+    margin-left: 35%;
+    margin-top: -25px;
+    margin-bottom: 15px;
+  }
+  .trait2{
+    text-decoration: underline 4px solid;
+    border-bottom: black solid 3px;
+    background-color:black;
+    width: 110%;
+    height: 1px;
+    margin-left: -5%;
+    margin-top: 2%;
+    // margin-right: 200% !important;
+   
+  }
+  .trait3{
+    text-decoration: underline 4px solid;
+    border-bottom: black solid 3px;
+    background-color:black;
+    width: 96%;
+    height: 1px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 3%;
+   
+  }
+
+//   =======================================
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 98%;
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px !important;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+html {
+    height: 100%;
+}
+
+
+ion-content {
+    --offset-bottom: auto !important;
+    background: #F8F6FB;
+    --overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+label {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    color: #f5f0e1;
+    cursor: pointer;
+    user-select: none;
+}
+
+label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked+label::before {
+    width: 10px;
+    left: 5px;
+    top: -5px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+}

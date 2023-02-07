@@ -1,0 +1,7 @@
+{
+  "name": "jurismalifront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
