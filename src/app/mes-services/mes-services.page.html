@@ -1,8 +1,8 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>mes-services</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -11,5 +11,39 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div id="droite">
+    <img src="assets/images/Service.jpg" alt="Logo " id="logo" />
+  </div>
 
+
+  <ion-accordion-group style="margin: 15px;">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Mes services({{totaledemande}})</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <div class="card" *ngFor="let demande of mesDemande | paginate:{itemsPerPage : 1, currentPage:p}" style="margin-bottom: 10px;">
+          <h5 class="card-header">{{demande.libelle}}({{demande.typeDemande}})</h5>
+          <div class="card-body">
+            <!-- <h5 class="card-title"></h5> -->
+            <p class="card-text">{{demande.description}}</p>
+          </div>
+        </div>
+        <pagination-controls class="paginat" style=" font-size: 10px;" (pageChange)="p =$event" previousLabel="Préc" nextLabel="Suiv"></pagination-controls>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third" style="margin-top: 15px;">
+      <ion-item slot="header" color="light">
+        <ion-label>Les demandes traitées</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <a href="path/to/file.pdf"  download>
+          Télécharger <i class="bi bi-download"></i>
+        </a>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <!-- <div class="demande" *ngFor="let demande of mesDemande">
+    {{demande.description}}
+  </div> -->
 </ion-content>

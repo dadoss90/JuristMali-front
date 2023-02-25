@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="fin">
+    <div class=" gaucheMilieu" *ngFor="let renseignemen of renseignement">
+      <div class="text">
+        <p>{{renseignemen.titre}}</p>
+      </div>
+      <div class="imag">
+        <!-- <video src="{{renseignemen.videos}}" alt="Logo " id="logo" /> -->
+        <video width="265" height="130" controls src="{{renseignemen.videos}}" class="img2"
+        type="video/mp4"></video>
+      </div>
+    </div>
+
+   
+  
+    <!-- <div class="col-md-6 " style="margin-bottom: 2%;">
+      <div class="texte text-center">
+        <p style="margin: 1px !important;">Constitution du Mali: Titre 2 de létat et de la souveraineté</p>
+      </div>
+      <div class="vide">
+        <video width="265" height="130" controls src="../../assets/images/Article 24 Droit et dévoirs.mp4" class="img2"
+          autoplay type="video/mp4"></video>
+      </div>
+
+    </div> -->
+
+
+  </div>
+
+</ion-content>

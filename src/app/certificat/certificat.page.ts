@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { DemandeService } from '../demande.service';
+import { Demande } from '../Model/demande';
 
 @Component({
   selector: 'app-certificat',
@@ -9,14 +10,16 @@ import { DemandeService } from '../demande.service';
 })
 export class CertificatPage implements OnInit {
 
-  demande: any;
+  demande: Demande = new Demande;
   document: any;
   libelle: string = 'Certificat de nationalité';
+  idUser!: any;
 
   constructor( private demandeservice : DemandeService ) { }
 
   ngOnInit() {
-    
+    this.idUser=localStorage.getItem('iduser')
+    console.log(this.idUser)
   }
 
   fileChang(event:any){
@@ -25,7 +28,7 @@ export class CertificatPage implements OnInit {
   }
 
   postdemandecertificat(){
-    this.demandeservice.AjouterDemande(this.document, this.libelle, localStorage.getItem('iduser')!).subscribe(data=>{
+    this.demandeservice.AjouterDemandeCertificat(this.document, this.demande.nomDemandeur, this.demande.prenomDemandeur, this.demande.dateDemandeur, this.demande.lieuNaissance, this.demande.pereDemandeur, this.demande.mereDemandeur, this.demande.professionDemandeur, this.demande.situationDemandeur, this.demande.domicileDemandeur,this.idUser  ).subscribe(data=>{
       this.demande = data;
       console.log(data)
       

@@ -63,13 +63,13 @@
           margin-bottom: 2%;
         }
 
-        .check {
+        .ratio {
           display: flex;
           margin-bottom: 4%;
 
         }
 
-        .check span {
+        .ratio span {
           margin-left: 5%;
         }
 
@@ -101,80 +101,85 @@
         }
       </style>
       <div class="profile ">
-        <input type="text" name="" id="nom" placeholder="nom"> &nbsp; &nbsp;
-        <input type="text" name="prenom" placeholder="prenom"> &nbsp; &nbsp;
-        <input type="number" name="Numero" id="" placeholder="Numero">
+        <input type="text" name="nom" id="nom" placeholder="nom" [(ngModel)]="nom"> &nbsp; &nbsp;
+        <input type="text" name="prenom" placeholder="prenom" [(ngModel)]="prenom"> &nbsp; &nbsp;
+        <input type="number" name="Numero" id="" placeholder="Numero" [(ngModel)]="numero">
       </div>
       <div class="profile ">
-        <input type="text" name="" id="" placeholder="Adresse"> &nbsp; &nbsp;
-        <input type="number" name="age" placeholder="Age"> &nbsp; &nbsp;
-        <input type="text" name="profession" id="" placeholder="Profession">
+        <input type="text" name="adresse" id="" placeholder="Adresse" [(ngModel)]="adresse"> &nbsp; &nbsp;
+        <input type="number" name="age" placeholder="Age" [(ngModel)]="age"> &nbsp; &nbsp;
+        <input type="text" name="profession" id="" placeholder="Profession" [(ngModel)]="profession">
       </div>
       <div class="profile">
-        <input type="text" name="" id="sexe" placeholder="Sexe"> &nbsp; &nbsp;
-        <input type="email" name="email" placeholder="email">
+        <input type="text" name="sexe" id="sexe" placeholder="Sexe" [(ngModel)]="sexe"> &nbsp; &nbsp;
+        <input type="email" name="email" placeholder="email" [(ngModel)]="email">
       </div>
       <p>Introduiser une demande pour chaque affaire</p>
+      
       <div class="trait3"></div>
-      <div class="check">
-        <input type="checkbox">
+      <!-- <div class="form-check">
+        <input class="form-check-input"  [(ngModel)]="typeDemande" value="Bail à loyer" type="radio" name="typeDemande" id="flexRadioDefault1">
+        <span>Bail à loyer</span>
+      </div> -->
+      <div class="form-check">
+        <input class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Bail à loyer">
         <span>Bail à loyer</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Divorce"> 
         <span>Divorce</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Violence domestique"> 
         <span>Violence domestique</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Pension Alimentaire"> 
         <span>Pension Alimentaire</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Garde d'enfant"> 
         <span>Garde d'enfant</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Droit Commercial"> 
         <span>Droit Commercial</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Droit du Travail"> 
         <span>Droit du Travail</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Droit Familial"> 
         <span>Droit Familial</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Contravention"> 
         <span>Contravention</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Délit"> 
         <span>Délit</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Crime"> 
         <span>Crime</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Protection de la jeunesse"> 
         <span>Protection de la jeunesse</span>
       </div>
-      <div class="check">
-        <input type="checkbox">
+      <div class="form-check">
+        <input  class="ttt" type="radio"  name="typeDemande" [(ngModel)]="typeDemande" value="Droit Administratif"> 
         <span>Droit Administratif</span>
       </div>
-      <div class="trait3"></div>
-      <div class="parent-div">
+      <!-- <div class="trait3"></div> -->
+      <div class="parent-div" style="margin-top: 30px;">
         <button class="btn-upload">Joindre un fichier</button>
-        <input type="file" name="upfile" accept="image/png, image/jpeg , imag/jpg" />
+        <input type="file" name="upfile" accept="image/png, image/jpeg , imag/jpg" (change)="fileChang($event)" />
         <span style="font-size: 10px;">Copie de la pièce d'identité!</span>
       </div>
-      <textarea id="story" name="story" rows="5" cols="28" style="border-radius: 12px;">
+      <textarea id="story" name="description" rows="5" cols="28" style="border-radius: 12px;" [(ngModel)]="description">
       Donnez une description ...
       </textarea>
       <button style="background-color: #BF553B; height: 40px;color: #fff; width:100%; border-radius: 12px; margin-bottom: 12%; margin-top: 2%; " (click)="soumettre()">Soumettre</button>

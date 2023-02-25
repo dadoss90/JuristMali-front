@@ -74,6 +74,18 @@ const routes: Routes = [
     path: 'mes-services',
     loadChildren: () => import('./mes-services/mes-services.module').then( m => m.MesServicesPageModule)
   },
+  {
+    path: 'espace-avocat',
+    loadChildren: () => import('./espace-avocat/espace-avocat.module').then( m => m.EspaceAvocatPageModule)
+  },
+  {
+    path: 'me-renseigner',
+    loadChildren: () => import('./me-renseigner/me-renseigner.module').then( m => m.MeRenseignerPageModule)
+  },
+  {
+    path: 'messagerie',
+    loadChildren: () => import('./messagerie/messagerie.module').then( m => m.MessageriePageModule)
+  },
 
 ];
 @NgModule({

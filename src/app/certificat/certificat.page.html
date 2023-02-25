@@ -16,71 +16,158 @@
     <div id="droite">
       <img src="assets/images/Justice.webp" alt="Logo " id="logo" />
     </div>
-   </div>
-   <div class="milieu">
+  </div>
+  <div class="milieu">
     <div class="debut">
       <h6 class="titre" style="text-align: center; font-weight: bold;">CERTIFICAT DE NATIONALITE</h6>
       <div class="trait"></div>
       <div class="demande">
-        <div></div>  
+        <div></div>
       </div>
     </div>
   </div>
 
   <div class="corps">
-    <h5 style="color: black; text-align: center;
+    <!-- <h5 style="color: black; text-align: center;
     padding-top: 1px; font-weight: bold;">PROCEDURE </h5>
      <p style="padding-left: 9px; padding-right: 9px; font-size: 12px; ">
       L’usager se présente au Bureau du Casier Judiciaire et du Certificat de Nationalité d’un Tribunal Civil.
        L’Agent du Bureau procède à l’enregistrement des informations sur une fiche qu’il transmet au Greffier en Chef.
         Le Greffier en Chef procède à la vérification et à l’enregistrement et soumet le Certificat à la signature du Président du Tribunal ou du Juge de Paix à Compétence Etendue.
          Le Certificat est enfin retourné au Bureau du Certificat de Nationalité.
-    </p>
-   <div class="tout" style="display: flex; justify-content: space-between;">
-    <div class="gauche1">
-      <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B;">
-        Document à fournir :</h6>
-      <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">
-        Copie de l'extrait d'acte de naissance</h6>
+    </p> -->
+    <form (ngSubmit)="postdemandecertificat()">
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Vos informations</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <div class="row">
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="nomDemandeur" id="nomDemandeur" [(ngModel)]="demande.nomDemandeur" placeholder="Nom">
+                  <label for="nomDemandeur" style="font-size: 14px;">Nom</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="prenomDemandeur" id="prenomDemandeur" [(ngModel)]="demande.prenomDemandeur" placeholder="Prénom">
+                  <label for="prenomDemandeur">Prénom</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input style="font-size: 10px;" type="date" class="form-control" name="dateDemandeur" id="dateDemandeur" [(ngModel)]="demande.dateDemandeur"
+                    placeholder="Né(e) le">
+                  <label for="dateDemandeur" style="font-size: 14px;">Né(e) le </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="lieuNaissance" id="lieuNaissance" [(ngModel)]="demande.lieuNaissance" placeholder="Lieu">
+                  <label for="lieuNaissance">Lieu</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="pereDemandeur" id="pereDemandeur" [(ngModel)]="demande.pereDemandeur" placeholder="Père">
+                  <label for="pereDemandeur" style="font-size: 14px;">Père</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="mereDemandeur" id="mereDemandeur" [(ngModel)]="demande.mereDemandeur" placeholder="Mère">
+                  <label for="mereDemandeur">Mère</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="professionDemandeur" id="professionDemandeur" [(ngModel)]="demande.professionDemandeur" placeholder="Profession">
+                  <label for="professionDemandeur" style="font-size: 14px;">Profession</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="situationDemandeur" id="situationDemandeur" [(ngModel)]="demande.situationDemandeur" placeholder="Situation">
+                  <label for="situationDemandeur">Situation</label>
+                </div>
+              </div>
 
-      <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B; margin-top: 35px;">
-        Coût légal :</h6>
-      <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">
-        750 francs CFA</h6>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="domicileDemandeur" id="domicileDemandeur" [(ngModel)]="demande.domicileDemandeur" placeholder="Situation">
+                  <label for="domicileDemandeur">Demeurant à</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-accordion>
+        <!-- <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Third Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Third Content
+        </div>
+      </ion-accordion> -->
+      </ion-accordion-group>
 
-      <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B;  margin-top: 35px;">
-        Délai d'obtention</h6>
-      <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">24 heures</h6>      
+      <div class="tout" style="display: flex; justify-content: space-between;">
+        <div class="gauche1">
+          <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B;">
+            Document à fournir :</h6>
+          <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">
+            Copie de l'extrait d'acte de naissance</h6>
 
-    </div>
+          <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B; margin-top: 35px;">
+            Coût légal :</h6>
+          <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">
+            750 francs CFA</h6>
 
+          <h6 style="font-size: 11px; font-weight: bold; margin-left: 5px; color: #BF553B;  margin-top: 35px;">
+            Délai d'obtention</h6>
+          <h6 style="font-size: 10px; margin-left: 5px; margin-top: -5px;">24 heures</h6>
 
-    <div class="droite1">
-
-     
-      <div class="buttondroit">
-        <form action="" >
-          <!-- <label for="myfile" >Photo</label> -->
-          <input type="file" name="photo" style="width: 75%; margin-left: 20%; font-size: 12px; height: 20px; margin-top: 13px;" (change)="fileChang($event)"><br><br>
-        </form>
-
-        <img src="assets/images/certificat nationalite.jpg" alt=""  style="width: 75%; margin-left: 16%;">
-
-       
         </div>
 
-    </div>
-   </div>
 
-   <div class="baspay">
-    <div class="pay1">
-      <img src="assets/images/Orange money.png" alt="" style="margin-left: 13px; height: 37px; width: 450px;">      
-    </div>
-    <div class="pay2" > <img src="assets/images/Mobi cash.jpg" alt="" style="height: 38%; margin-left: 35px;"></div>
-    <div class="pay3">
-      <button  style="background-color: #BF553B; width: 85px; color: white; margin-top: 5px; margin-right: 9px;"(click)="postdemandecertificat()">ENVOYER</button>
-    </div>
-   </div>
-    
-    </div>
+        <div class="droite1">
+
+
+          <div class="buttondroit">
+            <!-- <label for="myfile" >Photo</label> -->
+            <input type="file" name="photo"
+              style="width: 75%; margin-left: 20%; font-size: 12px; height: 20px; margin-top: 13px;"
+              (change)="fileChang($event)"><br><br>
+
+            <img src="assets/images/certificat nationalite.jpg" alt="" style="width: 75%; margin-left: 16%;">
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="baspay">
+        <div class="pay1">
+          <img src="assets/images/Orange money.png" alt="" style="margin-left: 13px; height: 32px; width: 450px;">
+        </div>
+        <div class="pay2"> <img src="assets/images/Mobi cash.jpg" alt="" style="height: 38%; margin-left: 35px;"></div>
+        <div class="pay3">
+          <button style="background-color: #BF553B; width: 85px; color: white; margin-top: 5px; margin-right: 9px;"
+            type="submit">ENVOYER</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
 </ion-content>

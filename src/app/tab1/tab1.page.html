@@ -1,15 +1,15 @@
 <ion-header [translucent]="true">
-  <ion-toolbar >
-    <ion-title >
-     <div class="touhead">
-      <div id="gauche">
-        <img class ="im"  src="assets/images/logojurismali.png" alt="Logo " id="logo" />
+  <ion-toolbar>
+    <ion-title>
+      <div class="touhead">
+        <div id="gauche">
+          <img class="im" src="assets/images/logojurismali.png" alt="Logo " id="logo" />
+        </div>
+        <div id="droite">
+          <img src="assets/images/SuperAdmin.png" alt="Logo " id="logo" id="popover-button" expand="block" />
+        </div>
       </div>
-      <div id="droite">
-        <img src="assets/images/SuperAdmin.png" alt="Logo " id="logo" id="popover-button" expand="block" />
-      </div>
-     </div>
-      
+
     </ion-title>
     <!--  -->
 
@@ -18,17 +18,21 @@
         <i class="bi bi-three-dots"></i>
       </ion-button> -->
 
-      <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps" >
+      <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
         <ng-template class="popUp">
-            <ion-list >
-              <ion-item routerLink ="/profil">Mon profil</ion-item>
-            </ion-list>
-            <ion-list >
-              <ion-item routerLink ="/mes-services">Mes Services</ion-item>
-            </ion-list>
-            <ion-list >
-              <ion-item routerLink ="/se deconnecter" (click) = "logOut()">Déconnexion</ion-item>
-            </ion-list>
+          <ion-list>
+            <ion-item routerLink="/profil">Mon profil</ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item routerLink="/mes-services">Mes Services</ion-item>
+          </ion-list>
+          <ion-list *ngIf="role == 'ROLE_ADMIN'  || role == 'ROLE_AVOCAT' ">
+            <!-- *ngIf="role=='ROLE_ADMIN'" -->
+            <ion-item routerLink="/espace-avocat" >Espace Avocat</ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item routerLink="/se deconnecter" (click)="logOut()">Déconnexion</ion-item>
+          </ion-list>
         </ng-template>
       </ion-popover>
     </ion-buttons>
@@ -39,53 +43,62 @@
 
 <ion-content [fullscreen]="true" class="container1">
 
- <div class="container">
- <div class="hau">
-  <div id="rectangle">
-    <p>Bienvenue sur Jurismali !</p>
-    <span>Notre plateforme vous offre un accès facile et rapide aux informations juridiques dont vous avez besoin pour gérer vos relations avec vos avocats et suivre vos dossiers de manière efficace.</span>
-   </div>
+  <div class="container">
+    <div class="hau">
+      <div id="rectangle">
+        <p>Bienvenue sur Jurismali !</p>
+        <span>Notre plateforme vous offre un accès facile et rapide aux informations juridiques dont vous avez besoin
+          pour gérer vos relations avec vos avocats et suivre vos dossiers de manière efficace.</span>
+      </div>
 
-   
- </div>
-
- <div class="milieu">
-  <div class="debut">
-    <h6 class="titre">Droits et devoirs de la personne humaine</h6>
-    <div class="trait"></div>
-    <div class="demande">
-      <div></div>
-      <ion-button id="buttonservice" routerLink="/demander">DEMANDER UN SERVICE</ion-button>
 
     </div>
-  </div>
-  <div class="fin">
-    <div class=" gaucheMilieu" *ngFor="let renseignements of renseignement">
-      <div class="imag">
-        <img src="{{renseignements.videos}}" alt="Logo " id="logo" />
-      </div>
-      <div class="text">
-        <p>{{renseignements.titre}}</p>
-        <!-- <p>Titre 2 de létat et de la souveraineté</p> -->
-      </div>
-    </div>
 
-     <div class="col-md-6 droiteMilieu">
-      <div class="imag">
-        <img src="assets/images/logojurismali.png" alt="Logo " id="logo" />
-      </div>
-      <div class="text">
-        <p>Constitution du Mali </p>
-         <p>Titre 2 de létat et de la souveraineté </p> 
-      </div>
-    </div> 
+    <div class="milieu">
+      <div class="debut"  style="margin-bottom: 2vh; ">
+        <h6 class="titre">Droits et devoirs de la personne humaine</h6>
+        <div class="trait"></div>
+        <div class="" style="height: 40vh !important; margin-left: 20%;">
+          <img src="../../assets/images/remove1.png" height="200px" style="margin-left: -10%; margin-top: -5%; width: 200% !important;"  alt="" >
 
-
+        </div>
+      </div>
    
-    
-  </div>
+      <!--     
+      <div class="fin">
+        <div class=" gaucheMilieu" *ngFor="let renseignements of renseignement">
+          <div class="imag">
+            <img src="{{renseignements.videos}}" alt="Logo " id="logo" />
+            
+          </div>
+          <div class="text">
+            <p>{{renseignements.titre}}</p>
+          </div>
+        </div> -->
 
-  <!-- <div class="fin">
+      <!-- <div class="col-md-6 ">
+          <div class="vide">
+            <video width="265" height="130" controls src="assets/images/video.png" class="img2" autoplay
+              type="video/mp4"></video>
+          </div>
+          <div class="texte text-center">
+            <p style="margin: 1px !important;">Constitution du Mali: Titre 2 de létat et de la souveraineté</p>
+          </div>
+        </div> -->
+
+
+
+
+
+
+    </div>
+    <div class="demande" style="background-color: #fff;">
+     
+        <ion-button class="deservice" id="buttonservice" routerLink="/me-renseigner">RENSEIGNEZ-VOUS</ion-button>
+        <ion-button class="deservice" id="buttonservice" routerLink="/demander">DEMANDER UN SERVICE</ion-button>
+      
+    </div>
+    <!-- <div class="fin">
     <div class=" gaucheMilieu">
       <div class="imag">
         <img src="assets/images/logojurismali.png" alt="Logo " id="logo" />
@@ -110,7 +123,7 @@
    
     
   </div> -->
-  <!-- <div class="fin">
+    <!-- <div class="fin">
     <div class=" gaucheMilieu">
       <div class="imag">
         <img src="assets/images/logojurismali.png" alt="Logo " id="logo" />
@@ -135,68 +148,68 @@
    
     
   </div> -->
-  <div class="fin">
-   
-    
-  </div> <div class="fin">
-    
+    <div class="fin">
+
+
+    </div>
+    <div class="fin">
+
+    </div>
+
   </div>
-  
- </div>
- </div>
 
 
 
- <ion-modal #modal trigger="open-modal" style="padding-left: 180px;">
-  <ng-template>
-    <ion-content>
-      <ion-toolbar>
-        <ion-title>Modal</ion-title>
-        <ion-buttons slot="end">
-          <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-list>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Connor Smith</h2>
-            <p>Sales Rep</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Daniel Smith</h2>
-            <p>Product Designer</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Greg Smith</h2>
-            <p>Director of Operations</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Zoey Smith</h2>
-            <p>CEO</p>
-          </ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ng-template>
-</ion-modal>
+  <ion-modal #modal trigger="open-modal" style="padding-left: 180px;">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Connor Smith</h2>
+              <p>Sales Rep</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Daniel Smith</h2>
+              <p>Product Designer</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Greg Smith</h2>
+              <p>Director of Operations</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Zoey Smith</h2>
+              <p>CEO</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 
- 
+
 </ion-content>
